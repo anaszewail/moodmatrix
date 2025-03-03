@@ -21,7 +21,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# CSS مستوحى من الخيال العلمي
+# CSS مستوحى من الخيال العلمي (كما في الكود السابق)
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&display=swap');
@@ -53,8 +53,8 @@ if "payment_initiated" not in st.session_state:
 if "mood_data" not in st.session_state:
     st.session_state["mood_data"] = None
 
-# NewsAPI Key (مجاني، احصل عليه من newsapi.org)
-NEWS_API_KEY = "YOUR_NEWS_API_KEY_HERE"  # سجل في newsapi.org للحصول على مفتاح مجاني
+# NewsAPI Key (تم إضافته من طلبك)
+NEWS_API_KEY = "2f67b31249a04b059356bf3d42d3b412"
 
 # بيانات PayPal Sandbox
 PAYPAL_CLIENT_ID = "AQd5IZObL6YTejqYpN0LxADLMtqbeal1ahbgNNrDfFLcKzMl6goF9BihgMw2tYnb4suhUfprhI-Z8eoC"
@@ -247,7 +247,7 @@ if st.button("Design My Mood!", key="design_mood"):
                 st.session_state["mood_data"] = {"mood_meter": mood_meter_buffer.getvalue()}
                 st.image(mood_meter_buffer, caption="Mood Meter")
                 
-                share_url = "https://moodmatrix-<your-id>.streamlit.app/"  # استبدل بـ رابطك الفعلي
+                share_url = "https://moodmatrix.streamlit.app/"  # استبدل بـ رابطك الفعلي بعد النشر
                 telegram_group = "https://t.me/+K7W_PUVdbGk4MDRk"
                 
                 st.markdown("<h3 style='text-align: center;'>Share Your Mood!</h3>", unsafe_allow_html=True)
